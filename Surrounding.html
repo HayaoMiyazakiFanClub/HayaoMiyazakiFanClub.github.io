@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Style.css" type="text/css">
+
+<!-- defines a title in the browser toolbar -->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2WNZMB0GG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2WNZMB0GG');
+    </script>
+    <title>Peripheral merchandise exhibition</title>
+</head>
+
+<!-- embed JavaScript code -->
+<script type="text/javascript">
+    // when the button associated with this function is clicked, 
+    //it hides the element with the ID "main", shows a confirmation dialog, 
+    //and if the user confirms, it shows the element again.
+    function dClick() {
+        window.location.href = "ThankYou.html";
+    }
+</script>
+<!-- end embed JavaScript code -->
+
+<!-- embed CSS code -->
+<style>
+    .merchandise-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .product-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .product-item {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-item img {
+        max-width: 200px;
+        height: auto;
+        margin-bottom: 15px;
+    }
+
+    .product-item h2 {
+        color: #333;
+        font-size: 1.5em;
+        margin-bottom: 10px;
+    }
+
+    .product-item p {
+        color: #666;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        color: #e74c3c;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+
+    button {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    button:hover {
+        background-color: #2980b9;
+    }
+
+    h1 {
+        color: #fff;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        margin-bottom: 30px;
+    }
+</style>
+<!-- end embed CSS code -->
+
+<!-- Define class to use pre-set background image -->
+
+<body class="Surrounding">
+    <!-- the page title. -->
+    <br><br><br><br><br>
+
+    <!-- The navigation bar is exactly the same as the home page, maintaining consistency. -->
+    <ul>
+        <li class="main"><a href="index.html">Home</a></li>
+
+        <li class="main"><a href="#">Film</a>
+            <ul class="sub">
+                <li><a class="sub" href="film web page/CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="film web page/HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="film web page/Totoro.html">My Neighbor Totoro</a></li>
+            </ul>
+        </li>
+
+        <li class="main"><a href="#">About</a>
+            <ul class="sub">
+                <li><a class="sub" href="About.html">About Us</a></li>
+                <li><a class="sub" href="Contact.html">Contact Us</a></li>
+                <li><a class="sub" href="Surrounding.html">Surrounding</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end the navigation bar. -->
+
+    <!-- Main content section for merchandise -->
+    <div id="main">
+        <div class="merchandise-container">
+            <h1>Hayao Miyazaki [Studio Ghibli] peripheral goods exhibition</h1>
+
+            <!-- Product Grid -->
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-item">
+                    <img src="Surrounding image/totoro01.jpg" alt="Totoro notebook">
+                    <h2>My Neighbor Totoro notebook</h2>
+                    <p class="price">HK$468</p>
+                    <button onclick="dClick()">Buy Now</button>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-item">
+                    <img src="Surrounding image/totoro02.jpg" alt="Book strap">
+                    <h2>Totoro Book strap</h2>
+                    <p class="price">HK$450</p>
+                    <button onclick="dClick()">Buy Now</button>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-item">
+                    <img src="Surrounding image/totoro03.jpg" alt="Totoro Notebook stickers">
+                    <h2>Totoro Notebook stickers</h2>
+                    <p class="price">HK$135</p>
+                    <button onclick="dClick()">Buy Now</button>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-item">
+                    <div class="product-item">
+                        <img src="Surrounding image/Kiki's01.jpg" alt="KiKi's Linear Notebook">
+                        <h2>KiKi's Notebook</h2>
+                        <p class="price">HK$612</p>
+                        <button onclick="dClick()">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item">
+                        <img src="Surrounding image/Kiki's02.jpg" alt="KiKi's Linear Notebook">
+                        <h2>KiKi's Book strap</h2>
+                        <p class="price">HK$612</p>
+                        <button onclick="dClick()">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item">
+                        <img src="Surrounding image/Kiki's03.jpg" alt="KiKi's Linear Notebook">
+                        <h2>KiKi's Notebook stickers</h2>
+                        <p class="price">HK$612</p>
+                        <button onclick="dClick()">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <div class="product-item">
+                        <img src="Surrounding image/Kiki's04.jpg" alt="KiKi's Linear Notebook">
+                        <h2>KiKi's Notebook stickers</h2>
+                        <p class="price">HK$612</p>
+                        <button onclick="dClick()">Buy Now</button>
+                    </div>
+                </div>
+                <div class="product-item">
+                    <img src="Surrounding image/Kiki's05.jpg" alt="KiKi's Linear Notebook">
+                    <h2>KiKi's Linear Notebook</h2>
+                    <p class="price">HK$612</p>
+                    <button onclick="dClick()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

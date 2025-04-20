@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Style.css" type="text/css">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2WNZMB0GG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2WNZMB0GG');
+    </script>
+    <title>Contact Us!</title>
+</head>
+
+<script type="text/javascript">
+    // If the "other" option is selected, the element is displayed; otherwise, it is hidden.
+    // If you select another option, even if the input box has popped up, it can be hidden again.
+
+    function showInputBox() {
+        var option = document.form.userSelect.value;
+        if (option == "other") {
+            document.getElementById("otherProduct").style.display = "block";
+        } else {
+            document.getElementById("otherProduct").style.display = "none";
+        }
+    }
+
+    // Updates the content of the "displayBudget" element to reflect the current value of the "Budget" input range slider. 
+    // This allows the user to see the selected budget value as they interact with the slider.
+
+    function getBudget() {
+        var Budget = document.form.Budget.value;
+        var displayBudget = document.getElementById("displayBudget");
+        displayBudget.textContent = Budget;
+    }
+
+    //to check use input data when user click submit button.
+    function checkSubmit() {
+        var gender = "";
+
+        //If the company name is not entered or if it is a number, an alert is shown. 
+        if (!isNaN(document.form.Company.value)) {
+            alert("Please enter your company name!");
+            //Don't submit form
+            return false;
+        } else {
+            //base on the user gender get the title
+            if (document.form.gender[0].checked) {
+                gender = 'Mr.';
+            } else {
+                gender = 'Ms.';
+            }
+            //if all the data is correct, then display the thank you message with the selected gender and the provided surname.
+            alert('Thank you! ' + gender + document.form.surname.value + ' I get you submit. I will contact you by phone or email within 7 working days.');
+        }
+        //submit form
+        return true;
+    }
+</script>
+
+<!-- Define class to use pre-set background image -->
+
+<body class="contact">
+    <!-- the page title. -->
+    <div id="flex-container">
+        <header>Contact Us</header>
+    </div>
+
+    <!-- The navigation bar is exactly the same as the home page, maintaining consistency. -->
+    <ul>
+        <li class="main"><a href="index.html">Home</a></li>
+        <li class="main"><a href="#">Film</a>
+            <ul class="sub">
+                <li><a class="sub" href="film web page/CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="film web page/HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="film web page/Totoro.html">My Neighbor Totoro</a></li>
+            </ul>
+        </li>
+
+        <li class="main"><a href="#">About</a>
+            <ul class="sub">
+                <li><a class="sub" href="About.html">About Us</a></li>
+                <li><a class="sub" href="Contact.html">Contact Us</a></li>
+                <li><a class="sub" href="Surrounding.html">Surrounding</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end the navigation bar. -->
+
+    <!-- Use a flexbox to hold all main content -->
+    <div id="flex-container">
+        <div id="main">
+            <p>If you like my page, please let me know by giving it a like!</p>
+            <input type="button" value="Like!" onclick="alert('I get your Like! Thank you~');" />
+            <p>If you have the idea of cooperating with us and want to sell related peripheral products,
+                you can also fill out this form.</p>
+
+            <!-- The contact form is enclosed within a '<form>'' element and includes various form elements such as text inputs, 
+            radio buttons, select dropdowns, a textarea, and an input range slider. 
+            When the user submits the form, 'checksubmit()' will be used to verify the entire form and output the correct pop-up window. -->
+            <form name="form" method="post" action="" onsubmit="return checkSubmit()">
+                <fieldset>
+                    <legend>Information</legend>
+
+                    <!-- Use pattern to ensure that the first letter entered by the user is uppercase. -->
+                    Your surname: <input type="text" name="surname" title="Please enter your surname e.g: Wong"
+                        pattern="[A-Z][a-zA-Z]*" required />
+                    <br />
+
+                    Your first Name: <input type="text" name="firstName" title="not required" />
+                    <br />
+
+                    Gender: <input type="radio" name="gender" value="M" required /> Male
+                    <input type="radio" name="gender" value="F" />Female
+                    <br />
+
+                    Company Name: <input type="text" name="Company" required />
+                    <br />
+
+                    <!-- A drop-down menu, when the user selects 'other', a Textbox will pop up to allow the user to enter his product category.(onchange) -->
+                    Product Type:
+                    <select name="userSelect" onchange="showInputBox()" required>
+                        <optgroup label="Toy">
+                            <option value="doll">Doll</option>
+                            <option value="modelToys">Model Toys</option>
+                            <option value="musicBox">Music Box</option>
+                        </optgroup>
+
+                        <optgroup label="other">
+                            <option value="poster">Poster</option>
+                            <option value="stationery" selected="selected">Stationery</option>
+                            <option value="other">Other</option>
+                        </optgroup>
+                    </select>
+                    <!-- end the drop-down menu -->
+                    <br />
+
+                    <textarea id="otherProduct" name="otherProduct">Please input your product here.</textarea>
+
+                    Date to start promotion: <input type="date" name="startPromotion" required />
+                    <br />
+
+                    End of promotion day: <input type="date" name="endPromotion" required />
+                    <br />
+
+                    <!-- By using 'getBudget()', the number can be displayed in real time when the user drags the horizontal bar. -->
+                    Your Budget: <input name="Budget" type="range" min="1000" max="30000" oninput="getBudget()"
+                        required />
+                    <span id="displayBudget"></span>
+                    <br />
+
+                    Contact-email: <input type="email" name="email" required />
+                    <br />
+
+                    <!-- use pattern to limit user input to 8 digits. -->
+                    Contact-Phone Number: <input type="tel" title="Please enter 8 digits: 12345678" name="phoneNumber"
+                        pattern="[0-9]{8}$" required />
+                    <br />
+
+                    <!-- three buttons, when user click help, it will show the email. -->
+                    <input type="submit" value="Submit Form" />
+                    <input type="reset" value="Clear Form" />
+                    <input type="button" value="Help" onclick="alert('my email: 230007151@stu.vtc.edu.hk')" ; />
+                </fieldset>
+            </form>
+
+            <p>Very important!!! I am not responsible for copyright issues,
+                I can only help you promote your products</p>
+        </div>
+    </div>
+</body>

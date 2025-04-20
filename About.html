@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Style.css" type="text/css">
+
+<!-- defines a title in the browser toolbar -->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2WNZMB0GG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2WNZMB0GG');
+    </script>
+    <title>About this website</title>
+</head>
+
+<!-- embed JavaScript code -->
+<script type="text/javascript">
+    // A welcome message is displayed when the page loads.
+    alert('Hello! I\'m glad you can see my page!');
+
+    // when the button associated with this function is clicked, 
+    //it hides the element with the ID "main", shows a confirmation dialog, 
+    //and if the user confirms, it shows the element again.
+    function dClick() {
+        var mainDiv = document.getElementById('main');
+        mainDiv.style.display = 'none';
+
+        setTimeout(function () {
+            if (confirm("Haha, I told you not to press me, just press OK to refresh the page!")) {
+                mainDiv.style.display = 'block';
+            }
+        }, 0);
+    }
+</script>
+<!-- end embed JavaScript code -->
+
+<!-- Define class to use pre-set background image -->
+
+<body class="about">
+    <!-- the page title. -->
+    <div id="flex-container">
+        <header>About this website</header>
+    </div>
+
+    <!-- The navigation bar is exactly the same as the home page, maintaining consistency. -->
+    <ul>
+        <li class="main"><a href="index.html">Home</a></li>
+
+        <li class="main"><a href="#">Film</a>
+            <ul class="sub">
+                <li><a class="sub" href="film web page/CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="film web page/HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="film web page/Totoro.html">My Neighbor Totoro</a></li>
+            </ul>
+        </li>
+
+        <li class="main"><a href="#">About</a>
+            <ul class="sub">
+                <li><a class="sub" href="About.html">About Us</a></li>
+                <li><a class="sub" href="Contact.html">Contact Us</a></li>
+                <li><a class="sub" href="Surrounding.html">Surrounding</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end the navigation bar. -->
+
+    <!-- Use a flexbox to hold all main content -->
+    <div id="flex-container">
+        <div id="main">
+            <p>Since I particularly like Hayao Miyazaki, I wrote this webpage with Hayao Miyazaki as the title.
+                This webpage introduces three Hayao Miyazaki movies.
+                These three movies are my favorite.</p>
+
+            <p>All image sources in this website were downloaded from the
+                <a href="https://www.ghibli.jp/">Ghibli</a> website.
+            </p>
+
+            <p>If you have any questions or objections to the content, please contact me:
+                <a href="mailto: 230007151@stu.vtc.edu.hk">230007151@stu.vtc.edu.hk</a>
+            </p>
+
+            <!-- The dClick() function is triggered when the button is pressed -->
+            <button onclick="dClick()">Don't clickme!!!</button>
+        </div>
+    </div>
+    <!-- end the main content -->
+</body>
+
+</html>

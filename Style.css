@@ -1,0 +1,366 @@
+header {
+    /*settings for containers*/
+    width: 100%;
+    margin: 5px;
+    padding: 10px;
+    border-radius: 8px;
+    /*settings for text*/
+    font-size: 60px;
+    color: rgb(59, 191, 243);
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    font-weight: 800;
+}
+
+/*set the margin and font-family, 
+and set the bsckground image 
+and set the background-size to cover to entire background area of the body.*/
+body {
+    margin: 5px;
+    font-family: Georgia;
+    background-image: url("images/HomeBackground.jpg");
+    background-size: cover;
+}
+
+/*only change the backhroumd image for this web page(5) and get the id to convenient classification*/
+body.about {
+    background-image: url("images/AboutPageBackground.jpg");
+}
+
+body.contact {
+    background-image: url("images/ContactPageBackground.jpg");
+}
+
+body.sky {
+    background-image: url("images/SkyPageBackground.jpg");
+}
+
+body.Howl {
+    background-image: url("images/HowlPageBackground.jpg");
+    background-size: 100%;
+}
+
+body.Totoro {
+    background-image: url("images/TotoroPageBackground.jpg");
+}
+
+body.Surrounding {
+    background-image: url("images/shop_background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*end the change for background*/
+
+#main {
+    /*Set transparency for background color*/
+    background: rgba(252, 221, 244, 0.8);
+
+    /* And add a rounded border */
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px;
+
+    /* There is also the width of the entire border, which is the size of the entire page. */
+    width: 100%;
+
+    /*The text in the border will become thicker*/
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+#flex-container {
+    /*This allows the container's child elements to be flex items.*/
+    display: flex;
+    /*the child elements will be arranged horizontally, and if they exceed the container's width, they will wrap to a new line.*/
+    flex-flow: row wrap;
+}
+
+/*Set some basic settings for the footer. 
+These settings are similar to the settings for the main content to keep the page consistent.*/
+footer {
+    text-align: center;
+    background: rgba(252, 221, 244, 0.8);
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 5px;
+    width: 100%;
+
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+}
+
+/*aligns the image to the right side of its container, adds a margin around the image, sets a specific width, 
+allows the height to adjust automatically, and applies rounded corners to the image*/
+img {
+    float: right;
+    margin: 10px;
+    width: 300px;
+    height: auto;
+    border-radius: 12px;
+}
+
+/*This is a special picture. I set it not to be displayed to facilitate my subsequent operations.*/
+img#thank {
+    display: none;
+    float: left;
+}
+
+/*The first letter of each paragraph is capitalized to highlight the paragraph.*/
+p:first-letter {
+    font-size: 2em;
+}
+
+/*Class to make paragraphs with normal first letter size*/
+.normal-first-letter:first-letter {
+    font-size: 1em;
+}
+
+/*I applied this to a subtitle. I made the text bold and large to highlight the entire title.*/
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    color: hsl(92, 80%, 60%);
+}
+
+/*The following settings are all for a simple horizontal navigation bar*/
+
+/*First, this is the most peripheral '<ul>' element.
+This is a container with rounded corners, 
+and I set the stacking order at the end to ensure it appears above other elements on the page.*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #afefef;
+    border-radius: 12px;
+    z-index: 1;
+}
+
+ul.sub {
+    position: fixed;
+    /*relative to the browser window, ignoring the scroll position*/
+    box-shadow: 10px 10px 5px grey;
+    /*visual effect*/
+}
+
+/* When my mouse stays on 'sub ul', the background color and text color change. */
+ul.sub a:hover {
+    background-color: lightseagreen;
+    color: black;
+}
+
+/*This menu is hidden at first, and will be displayed smoothly at a speed of 500ms until our mouse slides over it.*/
+ul.sub li {
+    height: 0;
+    transition: height 500ms;
+}
+
+li:hover .sub li {
+    height: 40px;
+}
+
+/*elements with next to each other horizontally*/
+li.main {
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+li a {
+    display: block;
+    /*Block-level elements occupy the entire width of their parent container 
+                                            and create a line break before and after them*/
+    color: rgb(255, 255, 255);
+    padding: 14px 16px;
+    text-decoration: none;
+    /*removes any text decoration, such as underlines*/
+    text-align: center;
+    font-weight: bolder;
+}
+
+/*When my mouse is on the submenu, the background color and text color will change, 
+and the outer frame has rounded corners, just like the large menu, which makes it look neater.*/
+li a:hover {
+    background-color: lightskyblue;
+    color: white;
+    border-radius: 10px;
+}
+
+/*End navigation bar settings*/
+
+/*This is the setting for the Contact page form*/
+/*Increase line spacing to allow users to read more clearly*/
+form {
+    line-height: 200%;
+}
+
+/*I set this to not display to make it easier for me to set up the java sript later.*/
+textarea {
+    display: none;
+}
+
+/*Create a circular frame to enclose the entire form content*/
+fieldset {
+    border-radius: 30px;
+    border-color: black;
+}
+
+/*Large text highlights the title of the form*/
+legend {
+    font-size: 30px;
+}
+
+/*This is the setting for the form*/
+
+/*create a flexible container, allowing them to adjust their width and wrap onto multiple rows if needed.*/
+.sliderVideo {
+    width: 100%;
+    height: auto;
+    flex-flow: row wrap;
+    display: flex;
+}
+
+/*iframe elements within the container have a specific width and height, and they are centered horizontally*/
+.sliderVideo iframe {
+    border: 0;
+    /*removing the border around the iframe element*/
+    width: 600px;
+    height: 350px;
+    margin: auto;
+}
+
+/*setting for slider.*/
+/*container for the image slider*/
+.sliderContainer {
+    width: 800px;
+    height: 400px;
+    overflow: hidden;
+    /*which hides any content that exceeds the dimensions of the container*/
+    position: relative;
+    /*which establishes the container as a positioning context for its child elements*/
+    z-index: 0;
+    /*Avoid covering up my navigation bar*/
+}
+
+/*child of the slider container*/
+.sliderContainer .sliderImgContainer {
+    /*Its width is the sum of the widths of all images, and its height is the same as the height of the image.*/
+    width: 4000px;
+    height: 400px;
+
+    overflow: hidden;
+    position: absolute;
+    /*Open the flexbox and arrange the images horizontally*/
+    display: flex;
+    /*The animation is named "run", has a duration of 10 seconds, uses an easing function of "ease".
+    The animation loops continuously, creating a slideshow effect*/
+    animation: run 10s ease infinite;
+}
+
+/*set the img size*/
+.sliderContainer .sliderImgContainer img {
+    width: 800px;
+    height: 400px;
+}
+
+/*rule defines a keyframe animation named "run"*/
+/*The animation defines different percentages at which the transform property is applied to the image container
+The images are placed side by side within the container, 
+and the container is translated horizontally to display different images at different times.
+At 100%, the image container is translated back to its initial position, creating a seamless loop.
+The horizontal movement position should be the same multiple of the image size.*/
+@keyframes run {
+
+    0%,
+    10% {
+        transform: translateX(0);
+    }
+
+    20%,
+    30% {
+        transform: translateX(-800px);
+    }
+
+    40%,
+    50% {
+        transform: translateX(-1600px);
+    }
+
+    60%,
+    70% {
+        transform: translateX(-2400px);
+    }
+
+    80%,
+    90% {
+        transform: translateX(-3200px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*End the setting for slider.*/
+
+/*when the screen size is 700 pixels or less, hide all pictures, sliders and videos*/
+@media (max-width: 700px) {
+    img {
+        display: none;
+    }
+
+    .sliderVideo {
+        display: none;
+    }
+}
+
+.thank-you-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.thank-you-container h1 {
+    color: #3498db;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.thank-you-container p {
+    color: #333;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.back-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.back-button:hover {
+    background-color: #2980b9;
+}
+
+.order-info {
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(243, 243, 243, 0.8);
+    border-radius: 8px;
+    text-align: left;
+}

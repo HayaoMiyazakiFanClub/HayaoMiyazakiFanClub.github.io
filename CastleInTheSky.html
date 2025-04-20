@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../Style.css" type="text/css">
+
+<!-- defines a title in the browser toolbar -->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2WNZMB0GG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2WNZMB0GG');
+    </script>
+    <title>Castle In The Sky(1986)</title>
+</head>
+
+<!-- embed JavaScript code -->
+<script type="text/javascript">
+    //Once the user presses the button, a window pops up to enter their opinion
+    function response() {
+        var userOption = prompt("Please put your idea...", "e.g very interesting/boring.");
+        //After entering your comments, a thank you message and thank you picture will be displayed.
+        alert("Thank you for your comment: " + userOption);
+        document.getElementById('thank').style.display = 'block';
+        document.getElementById('opinion').style.display = 'none';
+    }
+</script>
+
+<!-- Define class to use pre-set background image -->
+
+<body class="sky">
+    <!-- the page title. -->
+    <div id="flex-container">
+        <header>Castle In The Sky</header>
+    </div>
+
+    <!-- The navigation bar is exactly the same as the home page, maintaining consistency. -->
+    <ul>
+        <li class="main"><a href="../index.html">Home</a></li>
+        <li class="main"><a href="#">Film</a>
+            <ul class="sub">
+                <li><a class="sub" href="CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="Totoro.html">My Neighbor Totoro</a></li>
+            </ul>
+        </li>
+
+        <li class="main"><a href="#">About</a>
+            <ul class="sub">
+                <li><a class="sub" href="../About.html">About Us</a></li>
+                <li><a class="sub" href="../Contact.html">Contact Us</a></li>
+                <li><a class="sub" href="Surrounding.html">Surrounding</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end the navigation bar. -->
+
+    <!-- Use a flexbox to hold slider and youtube video. -->
+    <div class="sliderVideo">
+        <!-- the slider -->
+        <div class="sliderContainer">
+            <div class="sliderImgContainer">
+                <img src="../film images/sky01.jpg" alt="" />
+                <img src="../film images/sky02.jpg" alt="" />
+                <img src="../film images/sky03.jpg" alt="" />
+                <img src="../film images/sky04.jpg" alt="" />
+                <img src="../film images/sky05.jpg" alt="" />
+            </div>
+        </div>
+        <!-- end slider and put the youtube video-->
+        <iframe src="https://www.youtube.com/embed/5lMRfLJGXSM?si=SoImH2aMs8FVL-MB&amp" allowfullscreen></iframe>
+    </div>
+    <!-- end the flexbox -->
+
+    <!-- Use a flexbox to hold all main content -->
+    <div id="flex-container">
+        <div id="main">
+            <img src="../images/CastleSky.jpg">
+            <p>"Castle in the Sky" is a 1986 Japanese animated film directed by Hayao Miyazaki and animated by Studio
+                Ghibli.
+                It explores the themes of environmentalism and the relationships between humanity, nature, and
+                technology.</p>
+
+            <p>The movie is known for its beautiful animation, imaginative world-building, and compelling characters.
+                It is considered one of Miyazaki's masterpieces and a classic of Japanese animation.</p>
+
+            <p>The story follows orphans Sheeta and Pazu as they are pursued by various factions
+                who seek Sheeta's crystal necklace, which holds the key to the legendary flying castle, Laputa.</p>
+
+            <!-- The user can press this button to provide opinions. When he presses this button, 
+            function response() will be triggered. -->
+            <button type="button" id="opinion" onclick="response()">I have an opinion!</button>
+            <img id="thank" src="../images/thankOpinion.jpg" />
+        </div>
+    </div>
+
+    <!-- Use a flexbox to hold the footer -->
+    <div id="flex-container">
+        <footer>
+            Source by: <a href="https://w.wiki/3ntc">Wikipedia</a>
+        </footer>
+    </div>
+</body>
+
+</html>

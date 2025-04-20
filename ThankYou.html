@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="Style.css" type="text/css">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2WNZMB0GG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2WNZMB0GG');
+    </script>
+    <title>Thank You for Your Purchase</title>
+</head>
+
+<body class="Surrounding">
+    <!-- The navigation bar is exactly the same as the home page, maintaining consistency. -->
+    <ul>
+        <li class="main"><a href="index.html">Home</a></li>
+
+        <li class="main"><a href="#">Film</a>
+            <ul class="sub">
+                <li><a class="sub" href="film web page/CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="film web page/HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="film web page/Totoro.html">My Neighbor Totoro</a></li>
+            </ul>
+        </li>
+
+        <li class="main"><a href="#">About</a>
+            <ul class="sub">
+                <li><a class="sub" href="About.html">About Us</a></li>
+                <li><a class="sub" href="Contact.html">Contact Us</a></li>
+                <li><a class="sub" href="Surrounding.html">Surrounding</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end the navigation bar. -->
+
+    <div class="thank-you-container">
+        <h1>Thank You for Your Purchase!</h1>
+        <p>Your order has been successfully submitted. We will process your order and arrange shipment as soon as
+            possible.</p>
+
+        <div class="order-info">
+            <h2>Order Information</h2>
+            <p class="normal-first-letter">Order Number: <strong>#GH-
+                    <script>document.write(Math.floor(Math.random() * 10000) + 10000)</script>
+                </strong></p>
+            <p class="normal-first-letter">Order Time: <strong>
+                    <script>document.write(new Date().toLocaleString())</script>
+                </strong></p>
+            <p class="normal-first-letter">Payment Method: Online Payment</p>
+            <p class="normal-first-letter">Order Status: Processing</p>
+        </div>
+
+        <p>If you have any questions, please feel free to contact us.</p>
+        <a href="Surrounding.html" class="back-button">Back to Products Page</a>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../Style.css" type="text/css">
+
+<!-- defines a title in the browser toolbar -->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2WNZMB0GG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2WNZMB0GG');
+    </script>
+    <title>My Neighbor Totoro (1988)</title>
+</head>
+
+<!-- embed JavaScript code -->
+<script type="text/javascript">
+    //Once the user presses the button, a window pops up to enter their opinion
+    function response() {
+        var userOption = prompt("Please put your idea...", "e.g very interesting/boring.");
+        //After entering your comments, a thank you message and thank you picture will be displayed.
+        alert("Thank you for your comment: " + userOption);
+        document.getElementById('thank').style.display = 'block';
+        document.getElementById('opinion').style.display = 'none';
+    }
+</script>
+
+<!-- Define class to use pre-set background image -->
+
+<body class="Totoro">
+    <!-- the page title. -->
+    <div id="flex-container">
+        <header>My Neighbor Totoro</header>
+    </div>
+
+    <!-- The navigation bar is exactly the same as the home page, maintaining consistency. -->
+    <ul>
+        <li class="main"><a href="../index.html">Home</a></li>
+        <li class="main"><a href="#">Film</a>
+            <ul class="sub">
+                <li><a class="sub" href="CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="Totoro.html">My Neighbor Totoro</a></li>
+            </ul>
+        </li>
+
+        <li class="main"><a href="#">About</a>
+            <ul class="sub">
+                <li><a class="sub" href="../About.html">About Us</a></li>
+                <li><a class="sub" href="../Contact.html">Contact Us</a></li>
+                <li><a class="sub" href="Surrounding.html">Surrounding</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end the navigation bar. -->
+
+    <!-- Use a flexbox to hold slider and youtube video. -->
+    <div class="sliderVideo">
+        <div class="sliderContainer">
+            <div class="sliderImgContainer">
+                <img src="../film images/totoro01.jpg" alt="" />
+                <img src="../film images/totoro02.jpg" alt="" />
+                <img src="../film images/totoro03.jpg" alt="" />
+                <img src="../film images/totoro04.jpg" alt="" />
+                <img src="../film images/totoro05.jpg" alt="" />
+            </div>
+        </div>
+        <!-- end slider and put the youtube video-->
+        <iframe src="https://www.youtube.com/embed/HaLISMAGdOE?si=P5l68uPGDmcjkKGC" allowfullscreen></iframe>
+    </div>
+    <!-- end the flexbox -->
+
+    <!-- Use a flexbox to hold all main content -->
+    <div id="flex-container">
+        <div id="main">
+            <img src="../images/Totoro.jpg" />
+            <p>"My Neighbor Totoro" is a 1988 Japanese animated fantasy film directed by Hayao Miyazaki.
+                It follows the story of two sisters, Satsuki and Mei, who move to the countryside with their father.
+            </p>
+            <p>There, they encounter magical creatures, including the lovable forest spirit called Totoro.
+                The film celebrates the wonder of childhood, the joy of exploring nature, and the importance of family
+                and friendship. </p>
+            <p>It explores themes of animism, environmentalism, and the connection between humans and the natural world.
+                "My Neighbor Totoro" is widely beloved and has become an iconic film in the world of animation.</p>
+
+            <!-- The user can press this button to provide opinions. When he presses this button, 
+            function response() will be triggered. -->
+            <button type="button" id="opinion" onclick="response()">I have an opinion!</button>
+            <img id="thank" src="../images/thankOpinion.jpg" />
+        </div>
+    </div>
+
+    <!-- Use a flexbox to hold the footer -->
+    <div id="flex-container">
+        <footer>
+            Source by: <a href="https://w.wiki/3jLi">Wikipedia</a>
+        </footer>
+    </div>
+</body>
+
+</html>

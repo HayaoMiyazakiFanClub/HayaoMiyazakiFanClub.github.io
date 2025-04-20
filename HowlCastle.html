@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="../Style.css" type="text/css">
+
+<!-- defines a title in the browser toolbar -->
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-P2WNZMB0GG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-P2WNZMB0GG');
+    </script>
+    <title>Howl's Moving Castle(2004)</title>
+</head>
+
+<!-- embed JavaScript code -->
+<script type="text/javascript">
+    //Once the user presses the button, a window pops up to enter their opinion
+    function response() {
+        var userOption = prompt("Please put your idea...", "e.g very interesting/boring.");
+        //After entering your comments, a thank you message and thank you picture will be displayed.
+        alert("Thank you for your comment: " + userOption);
+        document.getElementById('thank').style.display = 'block';
+        document.getElementById('opinion').style.display = 'none';
+    }
+</script>
+
+<!-- Define class to use pre-set background image -->
+
+<body class="Howl">
+    <!-- the page title. -->
+    <div id="flex-container">
+        <header>Howl's Moving Castle</header>
+    </div>
+
+    <!-- The navigation bar is exactly the same as the home page, maintaining consistency. -->
+    <ul>
+        <li class="main"><a href="../index.html">Home</a></li>
+        <li class="main"><a href="#">Film</a>
+            <ul class="sub">
+                <li><a class="sub" href="CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="Totoro.html">My Neighbor Totoro</a></li>
+            </ul>
+        </li>
+
+        <li class="main"><a href="#">About</a>
+            <ul class="sub">
+                <li><a class="sub" href="../About.html">About Us</a></li>
+                <li><a class="sub" href="../Contact.html">Contact Us</a></li>
+                <li><a class="sub" href="Surrounding.html">Surrounding</a></li>
+            </ul>
+        </li>
+    </ul>
+    <!-- end the navigation bar. -->
+
+    <!-- Use a flexbox to hold slider and youtube video. -->
+    <div class="sliderVideo">
+        <!-- the slider -->
+        <div class="sliderContainer">
+            <div class="sliderImgContainer">
+                <img src="../film images/howl01.jpg" alt="" />
+                <img src="../film images/howl02.jpg" alt="" />
+                <img src="../film images/howl03.jpg" alt="" />
+                <img src="../film images/howl04.jpg" alt="" />
+                <img src="../film images/howl05.jpg" alt="" />
+            </div>
+        </div>
+        <!-- end slider and put the youtube video-->
+        <iframe src="https://www.youtube.com/embed/DJeUGpcle8s?si=TJzJKBGZTzRlzrzL" allowfullscreen></iframe>
+    </div>
+    <!-- end the flexbox -->
+
+    <!-- Use a flexbox to hold all main content -->
+    <div id="flex-container">
+        <div id="main">
+            <img src="../images/HowlCastle.jpg">
+            <p>"Howl's Moving Castle" is a 2004 Japanese animated fantasy film directed by Hayao Miyazaki.
+                It tells the story of Sophie, a young woman who is cursed and transformed into an old woman. </p>
+
+            <p>"Howl's Moving Castle" is a 2004 Japanese animated fantasy film directed by Hayao Miyazaki.
+                It tells the story of Sophie, a young woman who is cursed and transformed into an old woman. </p>
+
+            <p>The film explores themes of identity, acceptance, the consequences of war, and the value of compassion.
+                It is known for its imaginative world-building, complex characters, and strong anti-war messages.</p>
+
+            <!-- The user can press this button to provide opinions. When he presses this button, 
+            function response() will be triggered. -->
+            <button type="button" id="opinion" onclick="response()">I have an opinion!</button>
+            <img id="thank" src="../images/thankOpinion.jpg" />
+        </div>
+    </div>
+
+    <!-- Use a flexbox to hold the footer -->
+    <div id="flex-container">
+        <footer>
+            Source by: <a href="https://w.wiki/3iMj">Wikipedia</a>
+        </footer>
+    </div>
+</body>
+
+</html>
