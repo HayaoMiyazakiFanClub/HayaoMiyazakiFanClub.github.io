@@ -15,6 +15,97 @@
         gtag('config', 'G-P2WNZMB0GG');
     </script>
     <title>miyazaki hayao fans club</title>
+    <style>
+        /* 促销悬浮框样式 */
+        .promo-container {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            width: 220px;
+            background: linear-gradient(135deg, #f06292, #4a148c);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 999;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+        
+        .promo-container h3 {
+            margin: 0 0 10px 0;
+            font-size: 18px;
+        }
+        
+        .discount {
+            font-size: 36px;
+            font-weight: bold;
+            margin: 10px 0;
+            color: #ffeb3b;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+        
+        .promo-btn {
+            display: inline-block;
+            background-color: #ffeb3b;
+            color: #4a148c;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        
+        .promo-btn:hover {
+            background-color: white;
+            transform: scale(1.05);
+        }
+        
+        .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            color: rgba(255,255,255,0.7);
+        }
+        
+        .close-btn:hover {
+            color: white;
+        }
+        
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+            50% {
+                box-shadow: 0 4px 20px rgba(240, 98, 146, 0.6);
+            }
+            100% {
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            }
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .promo-container {
+                width: 180px;
+                right: 10px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .promo-container {
+                top: auto;
+                bottom: 20px;
+                right: 50%;
+                transform: translateX(50%);
+                width: 220px;
+            }
+        }
+    </style>
 </head>
 
 <body>
@@ -29,9 +120,9 @@
 
         <li class="main"><a href="#">Film</a>
             <ul class="sub">
-                <li><a class="sub" href="CastleInTheSky.html">Castle in the Sky</a></li>
-                <li><a class="sub" href="HowlCastle.html">Howl's Moving Castle</a></li>
-                <li><a class="sub" href="Totoro.html">My Neighbor Totoro</a></li>
+                <li><a class="sub" href="film web page/CastleInTheSky.html">Castle in the Sky</a></li>
+                <li><a class="sub" href="film web page/HowlCastle.html">Howl's Moving Castle</a></li>
+                <li><a class="sub" href="film web page/Totoro.html">My Neighbor Totoro</a></li>
             </ul>
         </li>
 
@@ -76,6 +167,15 @@
     </div>
     <!-- end the main content -->
 
+    <!-- 促销弹窗 -->
+    <div class="promo-container">
+        <span class="close-btn" onclick="this.parentElement.style.display='none'">×</span>
+        <h3>首次购买特惠</h3>
+        <div class="discount">70% OFF</div>
+        <p>宫崎骏官方周边限时折扣</p>
+        <a href="https://yourstore.com/products" class="promo-btn">立即购买</a>
+    </div>
+
     <!-- Use a flexbox to hold the footer -->
     <div id="flex-container">
         <footer>
@@ -83,6 +183,18 @@
         </footer>
     </div>
     <!-- end the footer -->
+
+    <script>
+        // 记录促销弹窗是否已关闭
+        if (localStorage.getItem('promoShown') === 'true') {
+            document.querySelector('.promo-container').style.display = 'none';
+        }
+        
+        // 当用户关闭促销弹窗时，记录状态
+        document.querySelector('.close-btn').addEventListener('click', function() {
+            localStorage.setItem('promoShown', 'true');
+        });
+    </script>
 </body>
 
 </html>
